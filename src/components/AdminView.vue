@@ -2,6 +2,10 @@
   <div>
     Title
     <input v-model="title" />
+    Image
+    <input v-model="image" />
+    Description
+    <input v-model="description" />
     <button @click="handleSubmit">SUBMIT</button>
   </div>
 </template>
@@ -28,4 +32,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>
