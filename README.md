@@ -12,7 +12,7 @@ En este repositorio usarás Vue para construir una aplicación de una sola pági
 
 1. Ejecuta `npm install` para instalar los paquetes.
 1. Ejecuta `npm run dev` para ejecutar el servidor de desarrollo
-1. En tu navegador ve a: `http://localhost:3000`.
+1. En tu navegador ve a: `http://localhost:5050`.
 
 ## Requisitos básicos
 
