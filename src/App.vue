@@ -13,6 +13,9 @@
 <script>
 import AdminView from "./components/AdminView.vue"; //importa archivos
 import UserView from "./components/UserView.vue";
+import Project1 from "./images/project1.jpg"
+import Project2 from "./images/project2.jpg"
+import Project3 from "./images/project3.jpg"
 
 export default {
   name: "app",
@@ -23,14 +26,29 @@ export default {
   data() {
     return {
       isAdmin: true, //verifica si estás dentro de la pestaña de Admin
-      allProjects: [] //array donde se guardan los proyectos
+      allProjects: [
+        {
+        title: "distopía presente",
+        image: Project1,
+        description: "my description",
+        },
+        {
+        title: "la luz tenue de dios",
+        image: Project2,
+        description: "my description 2",
+        },
+        {
+        title: "masones preparados para el apocalipsis",
+        image: Project3,
+        description: "my description 3",
+        }
+      ], //array donde se guardan los proyectos
     };
   },
   methods: {
     addProject(project) {
       this.allProjects.push(project);
-    }
-
+    },
   }
 };
 </script>

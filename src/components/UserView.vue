@@ -1,7 +1,8 @@
 <template>
-  <project-detail/>
-  <div v-if="projects.length > 0" class = "grid-container" @click="handleProject">
-    <article v-for="project in projects" :key="project.title" :project="project">
+  <project-detail @select="selectProject" :project="featuredProject" />
+  <div v-if="projects.length > 0" class = "grid-container" >
+
+    <article v-for="project in projects" :key="project.title" :project="project" @click="handleClick(project)"><!--key es un elemento necesario en todos los v-for//  :project="project"-->
       <img :src= "project.image" :alt="project.title" class="grid-container__image">
     </article>
   </div>
@@ -21,19 +22,26 @@ export default {
   },
   props: ["projects"],
 
-  methods: {
-    handleProject(){
-      this.$emit("highlightProject",{
-        title: this.title,
-        image: this.image,
-        description: this.description,
-      })
+  data(){
+    return{
+      featuredProject: this.projects[0],
     }
   },
+
+  methods: {
+    handleClick(project){
+      this.featuredProject = project
+    }
+  },
+
 };
 </script>
 
 <style>
+h2{
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
 .grid-container{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -48,7 +56,11 @@ export default {
   aspect-ratio: 1;
   width: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
+/*.grid-container__image:hover{
+  width: 150%
+}*/
 .user-view{
   text-align:center;
   text-transform: uppercase;

@@ -1,31 +1,23 @@
 <template>
+  <section>
     <div class = "detail-project">
     
         <div class = "detail-project-image-container">
-          <img src= "https://picsum.photos/536/354" class="detail-project__image">
+          <img :src= "project.image" :alt="project.title" class="detail-project__image">
         </div>
         <div class = "detail-project-information">
-          <h2>This is my project</h2>
-          <p>The description of my project to be presented in the main page.</p>
+          <h2>{{ project.title }}</h2>
+          <p>{{ project.description }}</p>
         </div>
       
     </div>
-  </template>
+  </section>
+</template>
   
   <script>
   export default {
     name: "ProjectDetail",
-    data() {
-        return {
-        ProjectInfo: [] 
-        };
-    },
-    methods: {
-      addProject(project) {
-        this.allProjects.push(project);
-      }
-
-    }
+    props:['project'],
   };
   </script>
   
@@ -53,6 +45,7 @@
   }
   .detail-project-information > h2,p{
     text-transform: uppercase;
+    text-align: left;
   }
   .detail-project-information > h2{
     letter-spacing: 1px;
@@ -60,7 +53,7 @@
     background-color: pink;
     padding: 8px 15px;
     margin: 0px;
-    width: 59%;
+    width: 320px;
     text-align: left;
   }
   </style>
