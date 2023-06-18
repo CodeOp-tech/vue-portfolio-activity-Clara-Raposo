@@ -1,0 +1,73 @@
+@media only screen and (max-width: 768px) {
+    body {
+      background-color: pink;
+      padding: 0px;
+      margin: 0px;
+    }
+    .div-buttons{
+
+      background-color: ivory;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    .selected-button{
+      background-color: pink;
+      height: 30px;
+    }
+    .admin-button, .user-button{
+      font-size: 18px;
+      padding: 0px 10px;
+      letter-spacing: 1px;
+    }
+    h1{
+      width: 100%;
+      padding: 10px 0;
+      padding-left: 40px;
+      margin: 0px;
+      text-align: left;
+    }
+    .h1-container{
+      width: 100%;
+      font-size: 18px;
+      padding: 10px 0;
+      margin: 0px;
+      display:flex;
+      position: absolute;
+      top: 60px;
+      align-content: right;
+    }
+   
+    /*--------------------User view--------------------*/
+    .detail-project-information{
+      width: 100%;
+    }
+
+    /*--------------------Admin view--------------------*/
+    .form-container{
+      margin-top: 180px;
+      width: 100%;
+      padding: 15px 0;
+      height: 255px;
+    }
+    .form{
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      margin: 10px;
+    }
+    h2{
+      width: 250px;
+      padding: 8px;
+      margin: 0px;
+    }
+    .form-container-title-image{
+      flex-direction: column;
+    }
+    .button-submit{
+      width: 150px;
+      margin-top: 25px;
+      margin-left: 350px;
+    }
+  }

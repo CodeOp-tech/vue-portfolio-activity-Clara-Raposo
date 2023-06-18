@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>MY PORTFOLIO</h1>
+    <div class="h1-container"><h1>MY PORTFOLIO</h1></div>
     <div :class="{'div-buttons': true}">
       <button @click="isAdmin = true" :class="{'admin-button': true, 'selected-button':isAdmin}">ADMIN</button>
       <button @click="isAdmin = false" :class="{'user-button': true, 'selected-button':!isAdmin}">USER</button>

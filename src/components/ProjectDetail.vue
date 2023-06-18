@@ -56,5 +56,11 @@
     width: 320px;
     text-align: left;
   }
+  .detail-project-information > p{
+    width: 700px;
+    line-height: 25px;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+  }
   </style>
   
